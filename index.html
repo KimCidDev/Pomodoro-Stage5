@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Pomodoro Timer Exercise" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,6 +18,27 @@
     />
   </head>
   <body>
-    <div class="Clock"></div>
+    <main>
+      <div id="clock">
+        <span id="minutes">20</span>
+        <span>:</span>
+        <span id="seconds">00</span>
+      </div>
+      <div class="buttons">
+        <button class="play">
+          <img src="/Assets/play-circle.svg" alt="play vector image" />
+        </button>
+        <button class="pause">
+          <img src="/Assets/pause-circle.svg" alt="pause vector image" />
+        </button>
+        <button class="stop">
+          <img src="/Assets/stop-circle.svg" alt="stop vector image" />
+        </button>
+        <button class="set">
+          <img src="/Assets/Vector.svg" alt="set vector image" />
+        </button>
+      </div>
+    </main>
+    <div id="extraFeatures"></div>
   </body>
 </html>
