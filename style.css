@@ -8,6 +8,9 @@
 
 :root {
   font-size: 65%;
+  
+  /* COLORS*/
+
 }
 
 /* MAIN EDITS */
@@ -18,13 +21,15 @@ body {
 
 
 main {
-  height: 100vh;
-
+  height: 98vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
 
+footer {
+  height: 2vh;
 }
 
 button {
@@ -35,8 +40,12 @@ button {
 
 .buttons {
   display: flex;
+  
   gap: 3rem;
+  padding: 1rem;
+  border-radius: 3rem;
 
+  background-color: #68326B;
 }
 
 /* TEXT EDITS */
