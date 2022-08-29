@@ -27,7 +27,7 @@ body {
 
 
 main {
-  height: 90vh;
+  height: clamp(85vh, 20vh, 95rem);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -44,14 +44,20 @@ button {
   background-color: transparent;
   border: none;
   gap: 5rem;
+
+  height: clamp(7rem, 12vw, 7.3rem)
 }
 
 .buttons {
   display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: clamp(27rem, 26vw, 32rem);
   
   gap: 3rem;
   padding: 1rem;
-  border-radius: 3rem;
+  border-radius: 99px;
 
   background-color: var(--playerColor);
 }
@@ -61,10 +67,14 @@ button {
   fill: var(--highlightButton);
 }
 
+.soundOn, .soundOff {
+  padding: 2rem;
+}
+
 /* TEXT EDITS */
 
 span {
   font-family: 'Roboto', sans-serif;
-  font-size: 13rem;
+  font-size: clamp(11rem, 10vw, 13rem);
   color: #fff;
 }
