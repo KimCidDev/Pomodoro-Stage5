@@ -10,18 +10,24 @@
   font-size: 65%;
   
   /* COLORS*/
-
+  --playerColor: hsl(296.8,36.3%,18%);
+  --bodyMainColor: #121214;
+  --highlightButton: #598756;
 }
 
 /* MAIN EDITS */
 
+.hide {
+  display: none;
+}
+
 body {
-  background-color: #121214;
+  background-color: var(--bodyMainColor)
 }
 
 
 main {
-  height: 98vh;
+  height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -29,6 +35,8 @@ main {
 }
 
 footer {
+  display: flex;
+  justify-content: flex-end;
   height: 2vh;
 }
 
@@ -45,7 +53,12 @@ button {
   padding: 1rem;
   border-radius: 3rem;
 
-  background-color: #68326B;
+  background-color: var(--playerColor);
+}
+
+.play svg path,
+.soundOff svg path {
+  fill: var(--highlightButton);
 }
 
 /* TEXT EDITS */
