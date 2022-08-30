@@ -10,9 +10,10 @@
   font-size: 65%;
   
   /* COLORS*/
-  --playerColor: hsl(296.8,36.3%,18%);
+  --playerColor: hsl(296, 37%, 18%);
   --bodyMainColor: #121214;
   --highlightButton: #598756;
+  --highlightVariant: #8fa77c;
 }
 
 /* MAIN EDITS */
@@ -22,7 +23,8 @@
 }
 
 body {
-  background-color: var(--bodyMainColor)
+  background-color: var(--bodyMainColor);
+  min-height: 100vh;
 }
 
 
@@ -67,6 +69,10 @@ button svg {
 .play svg path,
 .soundOff svg path {
   fill: var(--highlightButton);
+}
+
+.pause svg path {
+  fill: var(--highlightVariant);
 }
 
 .soundOn, .soundOff {
