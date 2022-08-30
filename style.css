@@ -44,8 +44,10 @@ button {
   background-color: transparent;
   border: none;
   gap: 5rem;
+}
 
-  height: clamp(7rem, 12vw, 7.3rem)
+button svg {
+  height: clamp(3rem, 3rem + 3.5vw, 8rem)
 }
 
 .buttons {
@@ -75,6 +77,6 @@ button {
 
 span {
   font-family: 'Roboto', sans-serif;
-  font-size: clamp(11rem, 10vw, 13rem);
+  font-size: clamp(10rem, 10vw, 13rem);
   color: #fff;
 }
