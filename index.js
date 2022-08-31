@@ -1,59 +1,40 @@
-// BUTTONS
+const buttonPlay = document.querySelector('.play')
+const buttonPause = document.querySelector('.pause')
+const buttonStop = document.querySelector('.stop')
+const buttonSet = document.querySelector('.set')
+const buttonSoundOn = document.querySelector('.sound-on')
+const buttonSoundOff = document.querySelector('.sound-off')
+const minutesDisplay = document.querySelector('#minutes')
+const secondsDisplay = document.querySelector('#seconds')
 
-const playButton = document.querySelector('.play')
-const pauseButton = document.querySelector('.pause')
-const stopButton = document.querySelector('.stop')
-const setButton = document.querySelector('.set')
-const volumeUpButton = document.querySelector('.play').innerHTML
-const volumeDownButton = document.querySelector('.play').innerHTML
-
-// CLOCK
-
-let minutes = document.querySelector('#minutes').innerHTML
-let seconds = document.querySelector('#seconds').textContent
-
-let userMinutes
-
-// INTERACTIONS
-
-function playTimer() {
-  return playButton.addEventListener('click', function () {
-    pauseButton.classList.remove('hide')
-    playButton.classList.add('hide')
-
-    stopButton.classList.remove('hide')
-    setButton.classList.add('hide')
-  })
+function timeDisplayed(minutes, seconds) {
+  minutesDisplay.textContent = String(minutes).padStart(2, '0')
+  secondsDisplay.textContent = String(seconds).padStart(2, '0')
 }
 
-playTimer()
+function timePassing() {
+  setTimeout(function () {
+    let seconds = Number(secondsDisplay.textContent)
+    let minutes = Number(minutesDisplay.textContent)
 
-function pauseTimer() {
-  return pauseButton.addEventListener('click', function () {
-    playButton.classList.remove('hide')
-    pauseButton.classList.add('hide')
-    setButton.classList.remove('hide')
-  })
+    timeDisplayed(minutes, 0)
+
+    if (minutes <= 0) {
+      return
+    }
+
+    if (seconds <= 00) {
+      seconds = 60
+      --minutes
+    }
+
+    timeDisplayed(minutes, String(seconds-1))
+    timePassing()
+  }, 1000)
 }
 
-pauseTimer()
+buttonPlay.addEventListener('click', function () {
+  timePassing()
+})
 
-function stopTime() {
-  return stopButton.addEventListener('click', function () {
-    playButton.classList.remove('hide')
-    pauseButton.classList.add('hide')
-    setButton.classList.remove('hide')
-  })
-}
-
-stopTime()
-
-function setTime() {
-  return setButton.addEventListener('click', function () {
-    newMinutes = prompt('Quantos minutos deseja?')
-
-    document.querySelector('#minutes').innerHTML = newMinutes
-  })
-}
-
-setTime()
+buttonStop.addEventListener('click', function () {})
