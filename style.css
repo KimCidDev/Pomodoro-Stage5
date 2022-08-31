@@ -71,7 +71,8 @@ button svg {
   fill: var(--highlightButton);
 }
 
-.pause svg path {
+.pause svg path,
+.soundOn svg path {
   fill: var(--highlightVariant);
 }
 
