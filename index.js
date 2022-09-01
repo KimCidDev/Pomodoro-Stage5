@@ -70,6 +70,8 @@ buttonStop.addEventListener('click', function () {
   buttonPlay.classList.remove('hide')
   buttonSet.classList.remove('hide')
 
+  audio.pause()
+
   clearTimeout(timerTimeOut)
   timeDisplayed(20, 0)
 })
