@@ -1,7 +1,8 @@
 export default function Timer({
   secondsDisplay,
   minutesDisplay,
-  timerTimeOut
+  timerTimeOut,
+  audio
 }) {
   function defaultTimer() {
     clearTimeout(timerTimeOut)
@@ -30,12 +31,13 @@ export default function Timer({
       timeDisplayed(minutes, 0)
 
       if (minutes <= 0) {
-        controls.defaultReset()
+        defaultTimer()
+        audio.pause()
         return
       }
 
       if (seconds <= 0) {
-        seconds = 60
+        seconds = 2
         --minutes
       }
 
