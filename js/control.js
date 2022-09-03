@@ -10,14 +10,12 @@ export default function controls({
 }) {
   function set() {
     minutesDisplay.textContent =
-      prompt('De quantos minutos você precisa?') || timer.defaultReset()
+      prompt('De quantos minutos você precisa?') || timer.defaultTimer()
   }
 
   function pause() {
     buttonPause.classList.add('hide')
     buttonPlay.classList.remove('hide')
-
-    clearTimeout(timerTimeOut)
   }
 
   function play() {
