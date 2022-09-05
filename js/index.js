@@ -27,49 +27,6 @@ const timer = Timer({
   secondsDisplay
 })
 
-/* Update time on the screen filling to two char
-
-function timeDisplayed(minutes, seconds) {
-  minutesDisplay.textContent = String(minutes).padStart(2, '0')
-  secondsDisplay.textContent = String(seconds).padStart(2, '0')
-}
-
-/* reset to default settings
-function defaultReset() {
-  buttonPlay.classList.remove('hide')
-  buttonPause.classList.add('hide')
-  buttonStop.classList.add('hide')
-  buttonSet.classList.remove('hide')
-
-  timeDisplayed(20, 0)
-}
-
-/* Idea of time in seconds
-
-function timePassing() {
-  timerTimeOut = setTimeout(function () {
-    let seconds = Number(secondsDisplay.textContent)
-    let minutes = Number(minutesDisplay.textContent)
-
-    timeDisplayed(minutes, 0)
-
-    if (minutes <= 0) {
-      defaultReset()
-      return
-    }
-
-    if (seconds <= 00) {
-      seconds = 60
-      --minutes
-    }
-
-    timeDisplayed(minutes, seconds - 1)
-    timePassing()
-  }, 1000)
-}
-
-*/
-
 // Button-events
 
 buttonPlay.addEventListener('click', function () {
